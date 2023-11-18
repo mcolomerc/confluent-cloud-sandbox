@@ -78,6 +78,18 @@ terraform show -json terraform.tfstate | jq '.values.outputs.cluster_api_key.val
 terraform show -json terraform.tfstate | jq '.values.outputs.cluster_api_key.value.secret'
 ```
 
+## Destroy
+
+```bash
+terraform destroy --var-file=sandbox.tfvars
+```
+
+or
+
+```bash
+terraform apply -auto-approve -destroy --var-file=sandbox.tfvars
+```
+
 <!-- BEGIN_TF_DOCS -->
  
 ## Modules
